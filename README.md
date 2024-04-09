@@ -41,7 +41,7 @@ Rare variant burden tests on whole exome sequencing data was performed on the UK
 
 # Software requirements
 
-This workflow has been tested with snakemake v7.30.1, python v3.9.13 and R v4.2.1.
+This workflow has been tested with snakemake v7.30.1, python v3.9.13 and R v4.2.1. Versions of other softwares are mentioned in the _Code availability_ section of the preprint.
 
 # License
 
