@@ -1,0 +1,18 @@
+terminology	read_code	read_term
+read2	44OE.	Plasma total cholesterol level
+read2	44P..	Serum cholesterol
+read2	44OE.	Serum total cholesterol level
+read2	44PK.	Serum fasting total cholesterol level
+ctv3	44P..	Serum cholesterol
+ctv3	X772L	Cholesterol level
+ctv3	X80Iz	Cholesterol
+ctv3	Xa86v	Total cholesterol
+ctv3	XSK14	Total cholesterol measurement
+ctv3	XE2eD	Serum cholesterol level
+ctv3	XaIRd	Plasma total cholesterol level
+ctv3	XaJe9	Serum total cholesterol level
+ctv3	XaLux	Serum fasting total cholesterol
+ctv3	.44PH	Total cholesterol measurement
+ctv3	.44PJ	Serum total cholesterol level
+ctv3	44PH.	Total cholesterol measurement
+ctv3	44PJ.	Serum total cholesterol level

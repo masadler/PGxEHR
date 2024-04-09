@@ -1,0 +1,21 @@
+terminology	read_code	read_term	BP_type
+read2	2469.	O/E - Systolic BP reading	SBP
+read2	246e.	Ambulatory systolic blood pressure	SBP
+read2	2464.	O/E - BP reading normal	BP
+read3	246Q.	Sitting systolic blood pressure	SBP
+ctv3	246..	O/E - blood pressure reading	BP
+ctv3	X779R	SAP - Systolic arterial pressure	SBP
+ctv3	XM02X	Systolic blood pressure	SBP
+read2	2466.	Systolic blood pressure	SBP
+read2	2465.	Systolic blood pressure	SBP
+read2	246d.	Systolic blood pressure	SBP
+read2	2467.	Systolic blood pressure	SBP
+read2	246K.	Systolic blood pressure	SBP
+read2	246L.	Systolic blood pressure	SBP
+read2	246E.	Systolic blood pressure	SBP
+read2	246Y.	Systolic blood pressure	SBP
+read2	246V.	Systolic blood pressure	SBP
+read2	246Z.	Systolic blood pressure	SBP
+read2	246W.	Systolic blood pressure	SBP
+read2	2462.	Systolic blood pressure	SBP
+read2	246Q.	Systolic blood pressure	SBP

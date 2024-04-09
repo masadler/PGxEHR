@@ -1,0 +1,6 @@
+category	drug	code
+biguanides	metformin	f4
+sulfonylureas		f3
+insulin_short		f1
+insulin		f2
+other		ft

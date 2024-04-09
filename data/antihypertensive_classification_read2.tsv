@@ -1,0 +1,75 @@
+type	drug	code
+ACEi	captopril	bi1
+ACEi	enalapril	bi2
+ACEi	lisinopril	bi3
+ACEi	quinapril	bi4
+ACEi	perindopril erbumine	bi5
+ACEi	ramipril	bi6
+ACEi	fosinopril	bi7
+ACEi	cilazapril	bi8
+ACEi	trandolapril	bi9
+ACEi	moexipril	biA
+ACEi	imidapril	biB
+ACEi	perindopril arginine	biC
+thiazide_diuretics	bendroflumethiazide	b21
+thiazide_diuretics	chlorothiazide	b22
+thiazide_diuretics	chlortalidone	b23
+thiazide_diuretics	clopamide	b24
+thiazide_diuretics	cyclopenthiazide	b25
+thiazide_diuretics	hydrochlorothiazide	b26
+thiazide_diuretics	hydroflumethiazide	b27
+thiazide_diuretics	indapamide	b28
+thiazide_diuretics	mefruside	b29
+thiazide_diuretics	methyclothiazide	b2a
+thiazide_diuretics	metolazone	b2b
+thiazide_diuretics	polythiazide	b2c
+thiazide_diuretics	xipamide	b2d
+CCB	amlodipine	blb
+CCB	nifedipine	bl8
+CCB	nifedipine	bll
+CCB	lidoflazine	bl6
+CCB	diltiazem	blj
+CCB	diltiazem	bl5
+CCB	verapamil	bb3
+CCB	mibefradil	bli
+CCB	lercanidipine	blh
+CCB	nisoldipine	blg
+CCB	nicardipine	bl7
+CCB	isradipine	bla
+CCB	felodipine	blc
+CCB	lacidipine	ble
+renin-i	aliskiren	bkF
+vasodilator	diazoxide	be1
+vasodilator	hydralazine hydrochloride	be2
+vasodilator	minoxidil	be3
+vasodilator	sodium nitroprusside	be4
+alpha_agonist	clonidine hydrochloride	bf1
+alpha_agonist	methyldopa	bf2
+alpha_agonist	moxonidine	bf4
+adrenergic_neurone_blocker	betanidine sulfate	bg1
+adrenergic_neurone_blocker	debrisoquine sulfate	bg2
+adrenergic_neurone_blocker	guanethidine monosulfate	bg3
+alpha_blocker	indoramin	bh1
+alpha_blocker	phenoxybenzamine	bh2
+alpha_blocker	phentolamine	bh3
+alpha_blocker	prazosin	bh4
+alpha_blocker	terazosin	bh5
+alpha_blocker	doxazosin	bh6
+ARB	candesartan	bk7
+ARB	losartan	bk3
+ARB	valsartan	bk4
+ARB	irbesartan	bk5
+ARB	telmisartan	bk8
+ARB	eprosartan	bk9
+ARB	olmesartan	bkB
+ARB	azilsartan	bkJ
+loop_diuretics	furosemide	b31
+loop_diuretics	bumetanide	b32
+loop_diuretics	etacrynic acid	b33
+loop_diuretics	piretanide	b34
+loop_diuretics	torasemide	b35
+pot_sparing_diuretics	amiloride hydrochloride	b41
+pot_sparing_diuretics	potassium canrenoate	b42
+pot_sparing_diuretics	spironolactone	b43
+pot_sparing_diuretics	triamterene	b44
+pot_sparing_diuretics	eplerenone	b45

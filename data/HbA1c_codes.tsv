@@ -1,0 +1,16 @@
+terminology	read_code	read_term
+read2	44TB.	Haemoglobin A1c level
+read2	44TC.	Haemoglobin A1 level
+read2	42W5.	Haemoglobin A1c level - International Federation of Clinical Chemistry and Laboratory Medicine standardised
+read2	42W4.	HbA1c level (DCCT aligned)
+read2	42W..	Hb. A1C - diabetic control
+ctv3	44TB.	Haemoglobin A1c level
+ctv3	44TC.	Haemoglobin A1 level
+ctv3	X772q	Haemoglobin A1c level
+ctv3	XaBLm	Haemoglobin A1 level
+ctv3	XaPbt	Haemoglobin A1c level - International Federation of Clinical Chemistry and Laboratory Medicine standardised
+ctv3	.42W4	HbA1c level (DCCT aligned)
+ctv3	.42W.	Glycated haemoglobin
+ctv3	.44TB	HbA1c - Haemoglobin A1c level
+ctv3	XaERp	HbA1c level (DCCT aligned)
+ctv3	X80U3	Glycosylated haemoglobin

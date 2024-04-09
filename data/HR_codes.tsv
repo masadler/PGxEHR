@@ -1,0 +1,13 @@
+terminology	read_code	read_term
+read2	24c..	Heart rate
+read3	24c0.	Baseline heart rate
+read4	242Z.	O/E - pulse rate NOS
+ctv3	XaQhV	Resting heart rate
+ctv3	Xabhw	Baseline heart rate
+ctv3	X773r	Heart rate
+ctv3	.242.	O/E - pulse rate
+ctv3	242..	O/E - pulse rate
+ctv3	242A.	Radial pulse rate
+ctv3	243..	O/E - pulse rhythm
+ctv3	X773s	Pulse rate
+ctv3	XaZWw	Radial pulse rate

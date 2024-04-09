@@ -1,0 +1,28 @@
+terminology	read_code	read_term
+read2	44d4.	Plasma random LDL cholesterol level
+read2	44d5.	Plasma fasting LDL cholesterol level
+read2	44dB.	Plasma LDL cholesterol level
+read2	44P6.	Serum LDL cholesterol level
+read2	44PD.	Serum fasting LDL cholesterol level
+read2	44PE.	Serum random LDL cholesterol level
+read2	44PI.	Calculated LDL cholesterol level
+ctv3	X80Ne	LDL - Low density lipoprotein
+ctv3	X80Ni	LDL - Low density lipoprotein cholesterol
+ctv3	XaEVs	Plasma LDL cholesterol level
+ctv3	XaIp4	Calculated LDL cholesterol level
+ctv3	XaXeZ	Target serum LDL (low density lipoprotein) cholesterol level
+ctv3	.44P6	Serum LDL cholesterol level
+ctv3	.44PD	Serum fasting LDL cholesterol level
+ctv3	.44PE	Serum random LDL cholesterol level
+ctv3	.44PI	Calculated LDL cholesterol level
+ctv3	.44d4	Plasma random LDL cholesterol level
+ctv3	.44d5	Plasma fasting LDL cholesterol level
+ctv3	.44dB	Plasma LDL cholesterol level
+ctv3	44PI.	Calculated LDL cholesterol level
+ctv3	44dB.	Plasma LDL cholesterol level
+ctv3	44P6.	Serum LDL cholesterol level
+ctv3	44PD.	Serum fasting LDL cholesterol level
+ctv3	44PE.	Serum random LDL cholesterol level
+ctv3	44d4.	Plasma random LDL cholesterol level
+ctv3	44d5.	Plasma fasting LDL cholesterol level
+ctv3	X772N	LDL - Low density lipoprotein cholesterol level

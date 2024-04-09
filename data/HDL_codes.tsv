@@ -1,0 +1,17 @@
+terminology	read_code	read_term
+read2	44d2.	Plasma random HDL cholesterol level
+read2	44d3.	Plasma fasting HDL cholesterol level
+read2	44dA.	Plasma HDL cholesterol level
+read2	44P5.	Serum HDL cholesterol level
+read2	44PB.	Serum fasting HDL cholesterol level
+read2	44PC.	Serum random HDL cholesterol level
+ctv3	X80J1	HDL - High density lipoprotein
+ctv3	X80NX	HDL - High density lipoprotein cholesterol
+ctv3	XaEVr	Plasma HDL cholesterol level
+ctv3	.44P5	Serum HDL cholesterol level
+ctv3	.44PB	Serum fasting HDL cholesterol level
+ctv3	.44PC	Serum random HDL cholesterol level
+ctv3	.44d2	Plasma random HDL cholesterol level
+ctv3	.44d3	Plasma fasting HDL cholesterol level
+ctv3	.44dA	Plasma HDL cholesterol level
+ctv3	X772M	HDL - High density lipoprotein cholesterol level
