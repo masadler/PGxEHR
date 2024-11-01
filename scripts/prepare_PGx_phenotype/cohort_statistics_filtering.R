@@ -42,12 +42,12 @@ for (cohort in cohorts){
         }
 
         df$reason = "cohort"
-        df[df$baseline_measure <= l, "reason"] = "low baseline"
+        df[df$baseline_measure < l, "reason"] = "low baseline"
 
         df_cohort = df
-        df_cohort = df_cohort[df_cohort$baseline_measure > l,]
+        df_cohort = df_cohort[df_cohort$baseline_measure >= l,]
         med_count = df_cohort %>% count(drug_start)
-        drugs = as.vector(med_count[med_count$n >= 20, "drug_start"])
+        drugs = as.vector(med_count[med_count$n >= 20, "drug_start"][[1]])
 
         df[!(df$drug_start %in% drugs) & (df$reason == "cohort"), "reason"] = "outsider drug"
 

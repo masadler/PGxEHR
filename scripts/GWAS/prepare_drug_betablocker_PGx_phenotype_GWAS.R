@@ -27,7 +27,7 @@ df = df[df$baseline_measure >= l,]
 
 # determine which drugs to use, minimum 20 per type
 med_count = df %>% count(drug_start)
-drugs = as.vector(med_count[med_count$n >= 20, "drug_start"])
+drugs = as.vector(med_count[med_count$n >= 20, "drug_start"][[1]])
 df = df[df$drug_start %in% drugs, ]
 
 # define GWAS outcome phenotypes

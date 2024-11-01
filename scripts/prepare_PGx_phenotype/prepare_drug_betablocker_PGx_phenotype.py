@@ -30,8 +30,8 @@ if filter == "s":
     baseline_dt_after = 7
 
     # time between prescription & post-measure
-    post_dt_min = 180
-    post_dt_max = 550
+    post_dt_min = 60
+    post_dt_max = 365
 
 elif filter == "l":
 
@@ -43,7 +43,7 @@ elif filter == "l":
     baseline_dt_after = 7
 
     # time between prescription & post-measure
-    post_dt_min = 180
+    post_dt_min = 60
     post_dt_max = 730
 
 #### other parameters

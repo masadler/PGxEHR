@@ -81,7 +81,7 @@ for (pair in medication_measure_pairs){
     df = df[df$baseline_measure > l,]
 
     med_count = df %>% count(drug_start)
-    drugs = as.vector(med_count[med_count$n >= 20, "drug_start"])
+    drugs = as.vector(med_count[med_count$n >= 20, "drug_start"][[1]])
     df = df[df$drug_start %in% drugs, ]
 
     if (pair %in% c("antihpt_all_SBP", "antihpt_ACEi_SBP", "antihpt_CCB_SBP", "antihpt_thiazide_diuretics_SBP", 

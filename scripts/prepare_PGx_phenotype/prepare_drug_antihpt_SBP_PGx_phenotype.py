@@ -35,8 +35,8 @@ if filter == "s":
     baseline_dt_after = 7
 
     # time between prescription & post-measure
-    post_dt_min = 180
-    post_dt_max = 550
+    post_dt_min = 60
+    post_dt_max = 365
 
 elif filter == "l":
 
@@ -48,7 +48,7 @@ elif filter == "l":
     baseline_dt_after = 7
 
     # time between prescription & post-measure
-    post_dt_min = 180
+    post_dt_min = 60
     post_dt_max = 730
 
 #### other parameters
@@ -70,8 +70,18 @@ medication_df = pd.read_csv(snakemake.input["medication"], sep = '\t')
 medication_df["issue_date"] = pd.to_datetime(medication_df["issue_date"]).dt.date
 medication_df = medication_df.replace('nan', np.NaN)
 medication_df.bb_combi = medication_df.bb_combi.fillna('no')
-medication_df[medication_df.drug == "perindopril arginine"]["drug"] = "perindopril"
-medication_df[medication_df.drug == "perindopril erbumine"]["drug"] = "perindopril"
+medication_df.loc[medication_df.drug == "perindopril arginine", "drug"] = "perindopril"
+medication_df.loc[medication_df.drug == "perindopril erbumine", "drug"] = "perindopril"
+
+# impute dose with median of drug if missing (very rarely)
+medication_df["is_antihpt"] = (medication_df.type.isin(antihpt_class)) & (~medication_df.drug.isna())
+median_dose_by_type = medication_df[medication_df.is_antihpt == True].groupby('drug')['dose'].median()
+medication_df = medication_df.rename(columns = {"dose": "dose_original"})
+medication_df['dose'] = medication_df.apply(lambda row: 
+                                               median_dose_by_type[row['drug']] 
+                                               if (pd.isnull(row['dose_original']) & row.is_antihpt)
+                                               else row['dose_original']
+                                               , axis=1)
 
 #### read all primary data for QC1 (1 entry 2 years before)
 clinical_data = pd.read_csv(snakemake.input["gp_clinical"], sep="\t", usecols = ["eid", "event_dt"], encoding= 'unicode_escape')
@@ -202,7 +212,7 @@ def PGx_phenotype(medication_df, measure_df, primary_data_df, filter, n_meas, ba
             continue
         
         # medication start - essential & secondary
-        medication_person_df_essential = medication_person_df[medication_person_df.type.isin(antihpt_class)]
+        medication_person_df_essential = medication_person_df[(medication_person_df.type.isin(antihpt_class)) & (~medication_person_df.drug.isna())]
 
         if medication_person_df_essential.shape[0] < 1: # no antihpt prescription at all
             removed["eid"].append(eid)

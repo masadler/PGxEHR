@@ -31,7 +31,7 @@ plot_cohort <- function(cohort, drug, biomarker, ylab, colors = c("#cfdde6", "#3
     df = df[df$baseline_measure > l,]
 
     med_count = df %>% count(drug_start)
-    drugs = as.vector(med_count[med_count$n >= 20, "drug_start"])
+    drugs = as.vector(med_count[med_count$n >= 20, "drug_start"][[1]])
     df = df[df$drug_start %in% drugs, ]
 
     df$cohort = drug
@@ -104,7 +104,7 @@ plot_cohort_SBP <- function(colors = c("#038216", "#89f098")){
         df = df[df$baseline_measure > l,]
 
         med_count = df %>% count(drug_start)
-        drugs = as.vector(med_count[med_count$n >= 20, "drug_start"])
+        drugs = as.vector(med_count[med_count$n >= 20, "drug_start"][[1]])
         df = df[df$drug_start %in% drugs, ]
 
         df = df[, c("cohort", "baseline_measure", "post_measure")]
@@ -119,7 +119,7 @@ plot_cohort_SBP <- function(colors = c("#038216", "#89f098")){
     df$biomarker = "Systolic blood pressure"
 
     df$biomarker = factor(df$biomarker)
-    df$cohort = factor(df$cohort, levels = c("All", "ACEi", "CCB", "diuretics", "beta blocker", "control"))
+    df$cohort = factor(df$cohort, levels = c("All (first-line)", "ACEi", "CCB", "diuretics", "beta blocker", "control"))
     df$measure = factor(df$measure, levels = c("measure1", "measure2"))
 
     p1 = ggplot(df, aes(x = cohort, y = level)) +

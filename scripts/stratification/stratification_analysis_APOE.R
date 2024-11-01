@@ -16,7 +16,7 @@ df = merge(df, prs_trait_df, by = "eid")
 l = 2
 df = df[df$baseline_measure > l,]
 med_count = df %>% count(drug_start)
-drugs = as.vector(med_count[med_count$n >= 20, "drug_start"])
+drugs = as.vector(med_count[med_count$n >= 20, "drug_start"][[1]])
 df = df[df$drug_start %in% drugs, ]
 
 # add snp

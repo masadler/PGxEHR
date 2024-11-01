@@ -1,4 +1,3 @@
-library(data.table)
 library(dplyr)
 library(tidyr)
 library(stringr)
@@ -16,6 +15,7 @@ names(result_df) = colnames
 i = 1
 for (cohort in cohorts){
     for (filter in c("s", "l")){
+        print(filter)
         print(cohort)
         df <- read.csv(paste0("output/PGx_phenotype/drug_", cohort, "_", filter, "_1_PGx_phenotype.tsv"), sep = '\t')
 
@@ -40,10 +40,11 @@ for (cohort in cohorts){
             l = 60
         }
 
-        df = df[df$baseline_measure > l,]
+        df = df[df$baseline_measure >= l,]
 
         med_count = df %>% count(drug_start)
-        drugs = as.vector(med_count[med_count$n >= 20, "drug_start"])
+        drugs = as.vector(med_count[med_count$n >= 20, "drug_start"][[1]])
+        print(drugs)
         df = df[df$drug_start %in% drugs, ]
 
         result_df[i, "cohort"] = cohort
@@ -53,9 +54,11 @@ for (cohort in cohorts){
         result_df[i, "Female"] = paste0(n_fem, " (", signif(n_fem/n*100, 3), ")")
         result_df[i, "Age"] = paste0(signif(mean(df$age_drug), 3), " (", signif(sd(df$age_drug), 3), ")")
         result_df[i, "BMI"] = paste0(signif(mean(df$BMI, na.rm=TRUE), 3), " (", signif(sd(df$BMI, na.rm=TRUE), 3), ")")
-        result_df[i, "baseline_time"] = paste0(signif(mean(df$baseline_DT), 3), " (", signif(sd(df$baseline_DT), 3), ")")
+        result_df[i, "baseline_time"] = paste0(signif(mean(df$baseline_DT), 3), " (", signif(sd(df$baseline_DT), 3), ") / ",
+        signif(median(df$baseline_DT), 3), "[", signif(quantile(df$baseline_DT, 0.25), 3), ", ", signif(quantile(df$baseline_DT, 0.75), 3),"]")
         result_df[i, "baseline"] = paste0(signif(mean(df$baseline_measure), 3), " (", signif(sd(df$baseline_measure), 3), ") ", unit)
-        result_df[i, "post_time"] = paste0(signif(mean(df$post_measure_DT), 3), " (", signif(sd(df$post_measure_DT), 3), ")")
+        result_df[i, "post_time"] = paste0(signif(mean(df$post_measure_DT), 3), " (", signif(sd(df$post_measure_DT), 3), ") / ",
+        signif(median(df$post_measure_DT), 3), "[", signif(quantile(df$post_measure_DT, 0.25), 3), ", ", signif(quantile(df$post_measure_DT, 0.75), 3), "]")
         result_df[i, "post_level"] = paste0(signif(mean(df$post_measure), 3), " (", signif(sd(df$post_measure), 3), ") ", unit)
         result_df[i, "completeness"] = paste0(signif(mean(df$completeness*100), 3), " (", signif(sd(df$completeness*100), 3), ")")
 
@@ -67,6 +70,8 @@ for (cohort in cohorts){
         }
 
         drug_stats = str_sub(drug_stats, start = 1, end = -3) # remove last semicolon
+
+        print(drug_stats)
 
         result_df[i, "drugs"] = drug_stats
 
