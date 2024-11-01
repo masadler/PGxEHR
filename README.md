@@ -1,10 +1,16 @@
 # Pharmacogenetic analysis of EHRs
 
-Welcome to the Github accompanying the manuscript **Leveraging large-scale biobank EHRs to enhance pharmacogenetics of cardiometabolic disease medications** which analyses the genetics of drug response for biomarker-medication pairs.
+Welcome to the Github accompanying the manuscript [**Leveraging large-scale biobank EHRs to enhance pharmacogenetics of cardiometabolic disease medications**](https://doi.org/10.1101/2024.04.06.24305415) which analyses the genetics of drug response for biomarker-medication pairs in the UK Biobank (UKBB).
+
+# Citation
+
+If you use scripts from this Github please consider citing the following preprint:
+
+Sadler MC, Apostolov A, Cevallos C, Ribeiro DM, Altman RB, Kutalik Z. Leveraging large-scale biobank EHRs to enhance pharmacogenetics of cardiometabolic disease medications. [medRxiv 2024.04.06.24305415](https://doi.org/10.1101/2024.04.06.24305415)
 
 # Usage
 
-This Github contains the workflow pipeline that was used to extract medication records and biomarker measures from electronic health records (EHRs), define pharmacogenetic (PGx) phenotypes and run PGx-GWAS analyses. Code to run whole exome burden tests on the [UK Biobank DNAnexus Research Analysis Platform](https://ukbiobank.dnanexus.com/) is also provided.
+This Github contains the workflow pipeline that was used to extract medication records and biomarker measures from electronic health records (EHRs) of the UKBB, define pharmacogenetic (PGx) phenotypes and run PGx-GWAS analyses. Code to run whole exome burden tests on the [UK Biobank DNAnexus Research Analysis Platform](https://ukbiobank.dnanexus.com/) is also provided.
 
 The workflow is organized as a [snakemake](https://snakemake.readthedocs.io/en/stable/) pipeline. This allows for a reproducible analysis and parallel computations - this is especially useful for parallel GWAS compuations. However, individual scripts can also be run without the snakemake workflow manager by replacing snakemake variables by hard-coded input and output paths.
 
@@ -33,9 +39,9 @@ Genome-wide association analyses (GWAS) were run using regenie in a [2-step proc
 
 Rare variant burden tests on whole exome sequencing data was performed on the UK Biobank DNAnexus research analysis platform. Corresponding scripts are in the `scripts/Exome` folder.
 
-## Software requirements
+# Software requirements
 
-This workflow has been tested with snakemake v7.30.1, python v3.9.13 and R v4.3.2.
+This workflow has been tested with snakemake v7.30.1, python v3.9.13 and R v4.3.2. Versions of other softwares are mentioned in the _Code availability_ section of the preprint.
 
 # License
 
